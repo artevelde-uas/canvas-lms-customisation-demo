@@ -6,5 +6,20 @@
   "repository": "https://bitbucket.org/ahsdile/canvas-lms-customisation-demo",
   "dependencies": {
     "@ahsdile/canvas-lms-app": "^0.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "css-loader": "^0.28.11",
+    "mini-css-extract-plugin": "^0.4.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.1.0",
+    "webpack-cli": "3"
+  },
+  "scripts": {
+    "dev": "webpack --config webpack.dev.js",
+    "dev-watch": "webpack --watch --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   }
 }
