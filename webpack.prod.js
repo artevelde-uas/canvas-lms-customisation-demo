@@ -2,6 +2,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: 'production',
+    performance: {
+        hints: 'error',
+        maxEntrypointSize: 1000000,
+        maxAssetSize: 1000000
+    },
     module: {
         rules: [{
             test: /\.js$/,
