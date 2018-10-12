@@ -1,0 +1,10 @@
+{
+  "description": "Example application for use with 'canvas-lms-app'",
+  "private": true,
+  "license": "MIT",
+  "author": "Renaat De Muynck <renaat.demuynck@arteveldehs.be>",
+  "repository": "https://bitbucket.org/ahsdile/canvas-lms-customisation-demo",
+  "dependencies": {
+    "@ahsdile/canvas-lms-app": "^0.4.0"
+  }
+}
