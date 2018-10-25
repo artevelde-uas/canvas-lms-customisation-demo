@@ -16,7 +16,9 @@ module.exports = {
                 options: {
                     presets: [[
                         '@babel/preset-env', {
-                            targets: browserList
+                            targets: browserList,
+                            useBuiltIns: 'entry',
+                            loose: true
                         }
                     ]]
                 }
