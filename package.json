@@ -6,6 +6,9 @@
   "repository": "https://bitbucket.org/ahsdile/canvas-lms-customisation-demo",
   "dependencies": {
     "@ahsdile/canvas-lms-app": "^0.4.0",
+    "@ahsdile/canvas-lms-enable-course-recycle-bin-plugin": "^0.4.2",
+    "@ahsdile/canvas-lms-reorder-dashboard-courses-plugin": "^0.1.0",
+    "@ahsdile/canvas-lms-sticky-left-menu-plugin": "^0.1.1",
     "@babel/polyfill": "^7.0.0",
     "@instructure/supported-browsers": "^1.0.0"
   },
