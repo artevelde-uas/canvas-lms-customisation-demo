@@ -6,6 +6,7 @@
   "repository": "https://bitbucket.org/ahsdile/canvas-lms-customisation-demo",
   "dependencies": {
     "@ahsdile/canvas-lms-app": "^0.4.0",
+    "@babel/polyfill": "^7.0.0",
     "@instructure/supported-browsers": "^1.0.0"
   },
   "devDependencies": {
