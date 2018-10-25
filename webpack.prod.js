@@ -1,4 +1,5 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const browserList = require('@instructure/supported-browsers');
 
 module.exports = {
     mode: 'production',
@@ -14,7 +15,11 @@ module.exports = {
             use: [{
                 loader: 'babel-loader',
                 options: {
-                    presets: ['@babel/preset-env']
+                    presets: [[
+                        '@babel/preset-env', {
+                            targets: browserList
+                        }
+                    ]]
                 }
             }]
         }, {
