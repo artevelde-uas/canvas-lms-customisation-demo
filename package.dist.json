@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "@ahsdile/canvas-lms-app": "^0.4.0",
+    "@ahsdile/canvas-lms-enable-course-recycle-bin-plugin": "^0.4.2",
+    "@ahsdile/canvas-lms-reorder-dashboard-courses-plugin": "^0.1.0",
+    "@ahsdile/canvas-lms-sticky-left-menu-plugin": "^0.1.1",
+    "@babel/polyfill": "^7.0.0",
+    "@instructure/supported-browsers": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "css-loader": "^0.28.11",
+    "mini-css-extract-plugin": "^0.4.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.1.0",
+    "webpack-cli": "3"
+  },
+  "scripts": {
+    "dev": "webpack --config webpack.dev.js",
+    "dev-watch": "webpack --watch --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  }
+}

@@ -25,6 +25,12 @@
   "scripts": {
     "dev": "webpack --config webpack.dev.js",
     "dev-watch": "webpack --watch --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "setup": "npm run setup:clean && npm run setup:git && npm run setup:install",
+    "presetup": "npx cli-confirm \"Are you sure? This will clean up this repo and reinitialize Git. [y/n]\"",
+    "setup:clean": "npx rimraf node_modules package-lock.json yarn.lock npm-debug.log yarn-error.log .git dist LICENSE README.md",
+    "setup:git": "git init && git add .gitignore package.json src/ webpack.prod.js webpack.dev.js && git commit --no-verify --message \"Initial commit\"",
+    "setup:install": "yarn || npm install",
+    "postsetup": "npx move-cli package.dist.json package.json && git commit --all --amend --no-edit --quiet"
   }
 }
