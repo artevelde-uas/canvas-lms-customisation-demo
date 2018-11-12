@@ -1,5 +1,7 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const browserList = require('@instructure/supported-browsers');
+const postcssImport = require('postcss-import');
+const postcssPresetEnv = require('postcss-preset-env');
 
 module.exports = {
     mode: 'production',
@@ -25,10 +27,24 @@ module.exports = {
             }]
         }, {
             test: /\.css$/,
-            use: [
-                MiniCssExtractPlugin.loader,
-                'css-loader'
-            ]
+            use: [{
+                loader: MiniCssExtractPlugin.loader
+            }, {
+                loader: 'css-loader',
+                options: {
+                    modules: true
+                }
+            }, {
+                loader: 'postcss-loader',
+                options: {
+                    plugins: [
+                        postcssImport(),
+                        postcssPresetEnv({
+                            browsers: browserList
+                        })
+                    ]
+                }
+            }]
         }]
     },
     plugins: [

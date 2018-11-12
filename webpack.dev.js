@@ -1,3 +1,4 @@
+const postcssPresetEnv = require('postcss-preset-env');
 
 module.exports = {
     mode: 'development',
@@ -17,10 +18,24 @@ module.exports = {
             }]
         }, {
             test: /\.css$/,
-            use: [
-                'style-loader',
-                'css-loader'
-            ]
+            use: [{
+                loader: 'style-loader'
+            }, {
+                loader: 'css-loader',
+                options: {
+                    modules: true,
+                    localIdentName: '[local]__[hash]',
+                    camelCase: true
+                }
+            }, {
+                loader: 'postcss-loader',
+                options: {
+                    plugins: [
+                        postcssImport(),
+                        postcssPresetEnv()
+                    ]
+                }
+            }]
         }]
     }
 };
