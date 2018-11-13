@@ -2,6 +2,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const browserList = require('@instructure/supported-browsers');
 const postcssImport = require('postcss-import');
 const postcssPresetEnv = require('postcss-preset-env');
+const postcssClean = require('postcss-clean');
 
 module.exports = {
     mode: 'production',
@@ -41,6 +42,9 @@ module.exports = {
                         postcssImport(),
                         postcssPresetEnv({
                             browsers: browserList
+                        }),
+                        postcssClean({
+                            level: 2
                         })
                     ]
                 }
