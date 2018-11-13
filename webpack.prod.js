@@ -1,3 +1,4 @@
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const browserList = require('@instructure/supported-browsers');
 const postcssImport = require('postcss-import');
@@ -10,6 +11,17 @@ module.exports = {
         hints: 'error',
         maxEntrypointSize: 1000000,
         maxAssetSize: 1000000
+    },
+    optimization: {
+        minimizer: [
+            new UglifyJsPlugin({
+                uglifyOptions: {
+                    output: {
+                        comments: false
+                    }
+                }
+            })
+        ]
     },
     module: {
         rules: [{
