@@ -24,9 +24,11 @@ module.exports = {
             }, {
                 loader: 'css-loader',
                 options: {
-                    modules: true,
-                    localIdentName: '[local]__[hash]',
-                    camelCase: true
+                    modules: {
+                        auto: true,
+                        localIdentName: '[local]__[hash]'
+                    },
+                    localsConvention: 'camelCaseOnly'
                 }
             }, {
                 loader: 'postcss-loader',
