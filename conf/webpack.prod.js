@@ -1,4 +1,4 @@
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const browserList = require('@instructure/supported-browsers');
 const postcssImport = require('postcss-import');
@@ -18,12 +18,13 @@ module.exports = {
     },
     optimization: {
         minimizer: [
-            new UglifyJsPlugin({
-                uglifyOptions: {
+            new TerserPlugin({
+                terserOptions: {
                     output: {
                         comments: false
                     }
-                }
+                },
+                extractComments: false
             })
         ]
     },
