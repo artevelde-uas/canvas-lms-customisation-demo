@@ -6,6 +6,12 @@
   "repository": "https://bitbucket.org/ahsdile/canvas-lms-customisation-demo",
   "dependencies": {
     "@artevelde-uas/canvas-lms-app": "^0.30.0",
+    "@artevelde-uas/canvas-lms-all-courses-terms-tabs-plugin": "^0.2.0",
+    "@artevelde-uas/canvas-lms-conference-editor-group-filter-plugin": "^0.1.1",
+    "@artevelde-uas/canvas-lms-enable-course-recycle-bin-plugin": "^1.0.0",
+    "@artevelde-uas/canvas-lms-export-course-groups-plugin": "^0.4.0",
+    "@artevelde-uas/canvas-lms-file-explorer-enhancements-plugin": "^0.1.0",
+    "@artevelde-uas/canvas-lms-fix-files-navigation-plugin": "^0.3.1",
     "@instructure/browserslist-config-canvas-lms": "^2.0.0",
     "core-js": "3"
   },
