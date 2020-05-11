@@ -1,3 +1,3 @@
-import canvas from '@ahsdile/canvas-lms-app';
+import canvas from '@artevelde-uas/canvas-lms-app';
 
 canvas.run();

@@ -5,7 +5,7 @@
   "author": "Renaat De Muynck <renaat.demuynck@arteveldehs.be>",
   "repository": "https://bitbucket.org/ahsdile/canvas-lms-customisation-demo",
   "dependencies": {
-    "@ahsdile/canvas-lms-app": "^0.4.0",
+    "@artevelde-uas/canvas-lms-app": "^0.30.0",
     "@instructure/supported-browsers": "^1.0.0",
     "core-js": "3"
   },
