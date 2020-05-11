@@ -7,6 +7,10 @@ const postcssClean = require('postcss-clean');
 
 module.exports = {
     mode: 'production',
+    entry: [
+        'core-js/stable',
+        './src/index.js'
+    ],
     performance: {
         hints: 'error',
         maxEntrypointSize: 1000000,
@@ -33,6 +37,7 @@ module.exports = {
                         '@babel/preset-env', {
                             targets: browserList,
                             useBuiltIns: 'entry',
+                            corejs: 3,
                             loose: true
                         }
                     ]]
