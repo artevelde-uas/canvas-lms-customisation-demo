@@ -1,6 +1,6 @@
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const browserList = require('@instructure/supported-browsers');
+const browserList = require('@instructure/browserslist-config-canvas-lms');
 const postcssImport = require('postcss-import');
 const postcssPresetEnv = require('postcss-preset-env');
 const postcssClean = require('postcss-clean');

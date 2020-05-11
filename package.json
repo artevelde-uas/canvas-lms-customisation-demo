@@ -6,7 +6,7 @@
   "repository": "https://bitbucket.org/ahsdile/canvas-lms-customisation-demo",
   "dependencies": {
     "@artevelde-uas/canvas-lms-app": "^0.30.0",
-    "@instructure/supported-browsers": "^1.0.0",
+    "@instructure/browserslist-config-canvas-lms": "^2.0.0",
     "core-js": "3"
   },
   "devDependencies": {
