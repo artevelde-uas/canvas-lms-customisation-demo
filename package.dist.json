@@ -1,31 +1,33 @@
 {
   "private": true,
-  "license": "MIT",
   "dependencies": {
-    "@ahsdile/canvas-lms-app": "^0.4.0",
-    "@ahsdile/canvas-lms-enable-course-recycle-bin-plugin": "^0.4.2",
-    "@ahsdile/canvas-lms-reorder-dashboard-courses-plugin": "^0.1.0",
-    "@ahsdile/canvas-lms-sticky-left-menu-plugin": "^0.1.1",
-    "@babel/polyfill": "^7.0.0",
-    "@instructure/supported-browsers": "^1.0.0"
+    "@artevelde-uas/canvas-lms-app": "^0.32.0",
+    "@artevelde-uas/canvas-lms-all-courses-terms-tabs-plugin": "^0.2.0",
+    "@artevelde-uas/canvas-lms-conference-editor-group-filter-plugin": "^0.1.1",
+    "@artevelde-uas/canvas-lms-enable-course-recycle-bin-plugin": "^1.0.0",
+    "@artevelde-uas/canvas-lms-export-course-groups-plugin": "^0.4.0",
+    "@artevelde-uas/canvas-lms-file-explorer-enhancements-plugin": "^0.1.0",
+    "@artevelde-uas/canvas-lms-fix-files-navigation-plugin": "^0.3.1",
+    "@instructure/browserslist-config-canvas-lms": "^2.0.0",
+    "core-js": "3"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "babel-loader": "^8.0.2",
-    "css-loader": "^0.28.11",
-    "mini-css-extract-plugin": "^0.4.0",
+    "css-loader": "^3.5.3",
+    "mini-css-extract-plugin": "^0.9.0",
     "postcss-clean": "^1.1.0",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.4.0",
-    "style-loader": "^0.21.0",
+    "style-loader": "^1.2.1",
     "webpack": "^4.1.0",
     "webpack-cli": "3"
   },
   "scripts": {
-    "dev": "webpack --config webpack.dev.js",
-    "dev-watch": "webpack --watch --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config ./conf/webpack.prod.js",
+    "build:dev": "webpack --config ./conf/webpack.dev.js",
+    "watch": "webpack --watch --config ./conf/webpack.dev.js"
   }
 }
