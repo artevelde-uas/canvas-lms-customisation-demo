@@ -66,7 +66,14 @@ module.exports = {
                             browsers: browserList
                         }),
                         postcssClean({
-                            level: 2
+                            level: {
+                                1: {
+                                    removeEmpty: false
+                                },
+                                2: {
+                                    removeEmpty: false
+                                }
+                            }
                         })
                     ]
                 }
