@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const browserList = require('@instructure/browserslist-config-canvas-lms');
 const postcssImport = require('postcss-import');
 const postcssPresetEnv = require('postcss-preset-env');
+const postcssUrl = require('postcss-url');
 const postcssClean = require('postcss-clean');
 
 module.exports = {
@@ -64,6 +65,10 @@ module.exports = {
                         postcssImport(),
                         postcssPresetEnv({
                             browsers: browserList
+                        }),
+                        postcssUrl({
+                            url: 'inline',
+                            encodeType: 'base64'
                         }),
                         postcssClean({
                             level: {

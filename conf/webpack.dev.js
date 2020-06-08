@@ -1,5 +1,6 @@
 const postcssImport = require('postcss-import');
 const postcssPresetEnv = require('postcss-preset-env');
+const postcssUrl = require('postcss-url');
 
 module.exports = {
     mode: 'development',
@@ -35,7 +36,11 @@ module.exports = {
                 options: {
                     plugins: [
                         postcssImport(),
-                        postcssPresetEnv()
+                        postcssPresetEnv(),
+                        postcssUrl({
+                            url: 'inline',
+                            encodeType: 'base64'
+                        })
                     ]
                 }
             }]
